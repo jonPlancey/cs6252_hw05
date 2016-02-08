@@ -1,16 +1,18 @@
 <?php 
 
-	$dir = ['/view/', '//../view/'];
-	
-	if (file_exists(dirname($dir[0]))) {
-		$path = $dir[0];
-	} else {
-		$path = $dir[1];
-	}
-	
-	function doesFileExist(){
+
+	function locateMainCssFile(){
+		$path = '';
+		$dir = ['/view/', '//../view/'];
+		
 		if (file_exists(dirname($dir[0]))) {
+			$path = $dir[0];
+		} else {
+			$path = $dir[1];
+		}
+		return $path;
 	}
+
 
 ?> 
 
@@ -23,7 +25,7 @@
 	<head>
 		<title>My Guitar Shop</title>
 		<link rel="stylesheet" type="text/css"
-			  href = "<?php echo $path ?>main.css">
+			  href = "<?php locateMainCssFile() ?>main.css">
 	</head>
 
 	<!-- the body section -->
