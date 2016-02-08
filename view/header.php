@@ -1,7 +1,6 @@
 <?php 
-
-
-	function locateMainCssFile(){
+	
+	function locateMainCssFile() {
 		$path = '';
 		$dir = ['/view/', '//../view/'];
 		
@@ -9,8 +8,8 @@
 			$path = $dir[0];
 		} else {
 			$path = $dir[1];
-		}
-		return $path;
+		}		
+		echo $path. 'main.css';		
 	}
 
 
@@ -25,7 +24,7 @@
 	<head>
 		<title>My Guitar Shop</title>
 		<link rel="stylesheet" type="text/css"
-			  href = "<?php locateMainCssFile() ?>main.css">
+			  href = '<?php locateMainCssFile() ?>'>
 	</head>
 
 	<!-- the body section -->
