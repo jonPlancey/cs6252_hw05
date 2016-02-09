@@ -26,7 +26,7 @@
 		<link rel="stylesheet" type="text/css"
 			  href = '<?php locateMainCssFile() ?>'>
 	</head>
-
+	
 	<!-- the body section -->
 	<body>
 	
