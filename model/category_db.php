@@ -21,8 +21,7 @@
 	    return $category_name;
 	}
 	
-	function add_category($category_id) {
-		/*
+	function add_category($name) {
 		global $db;
 		$query = 'INSERT
 				  INTO
@@ -30,17 +29,15 @@
 				  VALUES (:category_name)';
 		
 		$statement = $db->prepare($query);
-		$statement->bindValue(':category_name', $category);
+		$statement->bindValue(':category_name', $category_name);
 		$statement->execute();
 		$statement->closeCursor();	
-		*/
 		
-		echo '<script language="javascript">alert("' .$category_id. '")</script>';
+		echo '<script language="javascript">alert("' .$name. '")</script>';
 		
 	}
 		
 	function delete_category($category_id) {
-	/*
 		global $db;		
 		$query = 'DELETE FROM categories
               WHERE categoryID = :category_id';
@@ -49,9 +46,6 @@
 		$statement->bindValue(':category_id', $category_id);
 		$success = $statement->execute();
 		$statement->closeCursor();	
-		
-		*/
-		echo '<script language="javascript">alert("' .$category_id. '")</script>';
-		
+
 	}
 ?>
