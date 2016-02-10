@@ -85,10 +85,13 @@
 
 	function add_categories(){
 		add_category();
+		header('Location: .?action=list_caetgories');
+		
 	}
 	
 	function delete_categories(){
 		delete_category();		
+		header('Location: .?action=list_caetgories');
 	}
 
 
