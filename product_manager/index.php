@@ -74,15 +74,11 @@
 	} else if ($action == 'list_categories') {
     	list_categories();
 		
-	} else if ($action == 'add_categories') {
-		echo '<script language="javascript">alert("add_categories")</script>';
+	} else if ($action == 'add_categories') {		
+		add_categories();
 		
-		add_category();
-		
-	} else if ($action == 'delete_categories') {
-		echo '<script language="javascript">alert("delete_categories")</script>';
-		
-		delete_category();
+	} else if ($action == 'delete_categories') {		
+		delete_categories();
 		
 	}
 	
@@ -95,23 +91,30 @@
 	function add_categories(){
 		
 		echo '<script language="javascript">alert("add_categories")</script>';
+
+/*
+		$category = filter_input(INPUT_POST, 'name');
 		
-		
-		$categories = get_categories();
-		add_category($categories);
-		header('Location: .?action=list_categories');
+		if ($category == NULL) {
+			$error = "Invalid category name. Check name and try again.";
+			include('view/error.php');
+		} else {
+			add_category($category);
+			header('Location: .?action=list_categories');		
+		}
+		add_category($category);
+		header('Location: .?action=list_categories');*/
 		
 	}
 	
 	function delete_categories(){
 		
-		echo '<script language="javascript">alert("add_categories")</script>';
+		echo '<script language="javascript">alert("delete_categories")</script>';
 		
-		
-		
+/*
 		$category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 		delete_category($category_id);
-		header('Location: .?action=list_categories');		
+		header('Location: .?action=list_categories');*/		
 	}
 
 

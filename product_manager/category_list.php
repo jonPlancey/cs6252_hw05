@@ -13,11 +13,13 @@
 			<tr>                
 				<td><?php echo $category['categoryName']; ?></td>
 			  
-				<td><form action="index.php" method="post">
-				    <input type="hidden" name="action" value="delete_categories"/>				
-					<input type="hidden" name="category_id"  value="<?php echo $category['categoryID']; ?>">						 	
-					<input type="submit" value="Delete">
-				</form></td>
+				<td>
+					<form action="index.php" method="post">
+				    	<input type="hidden" name="action" value="delete_categories"/>				
+						<input type="hidden" name="category_id"  value="<?php echo $category['categoryID']; ?>">						 	
+						<input type="submit" value="Delete">
+					</form>
+				</td>
 			</tr>
 					
 			<?php endforeach; ?>  						 
@@ -29,6 +31,7 @@
 	    
 	    <!-- Newly added form code -->   
 	    <form action="index.php" method="post"> 
+	     	<input type="hidden" name="action" value="add_categories" />
 		    <label>Name:</label>
 		    <input type="text" name="category_name">
 		

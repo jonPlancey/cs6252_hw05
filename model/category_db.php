@@ -22,6 +22,7 @@
 	}
 	
 	function add_category($category_id) {
+		/*
 		global $db;
 		$query = 'INSERT
 				  INTO
@@ -32,14 +33,14 @@
 		$statement->bindValue(':category_name', $category);
 		$statement->execute();
 		$statement->closeCursor();	
-		
+		*/
 		
 		echo '<script language="javascript">alert("' .$category_id. '")</script>';
 		
 	}
 		
 	function delete_category($category_id) {
-
+	/*
 		global $db;		
 		$query = 'DELETE FROM categories
               WHERE categoryID = :category_id';
@@ -49,7 +50,7 @@
 		$success = $statement->execute();
 		$statement->closeCursor();	
 		
-		
+		*/
 		echo '<script language="javascript">alert("' .$category_id. '")</script>';
 		
 	}
