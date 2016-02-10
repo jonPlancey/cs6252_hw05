@@ -5,6 +5,8 @@
     <aside>
         <h1>Categories</h1>
         
+        <?php include '../view/categories_nav.php'; ?>
+                
         <nav>
             <ul class="nav">
                 <!-- display links for all categories -->
