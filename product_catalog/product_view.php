@@ -1,7 +1,10 @@
 <?php include '../view/header.php'; ?>
 <main>
+
+
     <aside>
         <h1>Categories</h1>
+        
         <nav>
             <ul class="nav">
                 <!-- display links for all categories -->
@@ -15,7 +18,10 @@
                 <?php endforeach; ?>
             </ul>
         </nav>
+        
     </aside>
+    
+    
     <section>
         <h1><?php echo $name; ?></h1>
         <div id="left_column">
