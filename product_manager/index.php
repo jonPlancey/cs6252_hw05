@@ -85,13 +85,15 @@
 	}
 
 	function add_categories(){
-		$categories = add_category();
+		$categories = get_categories();
+		add_category($categories);
 		//header('Location: .?action=list_categories');
 		
 	}
 	
 	function delete_categories(){
-		$categories = delete_category();		
+		$categories = get_categories();
+		delete_category($categories);		
 		//header('Location: .?action=list_categories');
 	}
 
