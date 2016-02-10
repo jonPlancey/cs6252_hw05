@@ -70,16 +70,25 @@
     	list_categories();
 		
 	} else if ($action == 'add_category') {
-		echo 'add_category';
+		add_category();
 		
 	} else if ($action == 'delete_category') {
-		echo 'delete_category';
+		delete_category();
 		
 	}
-
+	
+	
 	function list_categories(){
 		$categories = get_categories();
-		include('category_list.php');		
+		include('category_list.php');
+	}
+
+	function add_category(){
+		echo 'add_category';
+	}
+	
+	function delete_category(){
+		echo 'delete_category';		
 	}
 
 
