@@ -7,8 +7,7 @@
             <th>&nbsp;</th>
         </tr>
         
-        <!-- Newly added table -->
-        
+        <!-- Newly added table -->        
 		<?php foreach ($categories as $category) : ?>
 
 		<tr>                
@@ -20,8 +19,7 @@
 			</form></td>
 		</tr>
 				
-		<?php endforeach; ?>  
-						 
+		<?php endforeach; ?>  						 
         <!-- Newly added tabe -->        
     
     </table>
