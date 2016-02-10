@@ -90,15 +90,14 @@
 
 	function add_categories(){
 		$category = filter_input(INPUT_POST, 'category_name');
-
+		
 		if ($category == NULL) {
-			$error = "Invalid category name. Check name and try again.";
+			$error = "Invalid category name. Check name and try again.";							
 			include('view/error.php');
-		} else {
+		} else {							
 			add_category($category);
 			header('Location: .?action=list_categories');		
 		}
-
 	}
 	
 	function delete_categories(){

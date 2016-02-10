@@ -21,7 +21,7 @@
 	    return $category_name;
 	}
 	
-	function add_category($name) {
+	function add_category($category) {
 		global $db;
 		$query = 'INSERT
 				  INTO
@@ -29,12 +29,10 @@
 				  VALUES (:category_name)';
 		
 		$statement = $db->prepare($query);
-		$statement->bindValue(':category_name', $category_name);
+		$statement->bindValue(':category_name', $category);
 		$statement->execute();
 		$statement->closeCursor();	
-		
-		echo '<script language="javascript">alert("' .$name. '")</script>';
-		
+
 	}
 		
 	function delete_category($category_id) {
