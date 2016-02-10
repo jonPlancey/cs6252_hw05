@@ -27,7 +27,7 @@
 	    <h2>Add Category</h2>
 	    
 	    <!-- Newly added form code -->   
-	    <form action="category_list.php" method="post"> 
+	    <form action="index.php" method="post"> 
 		    <label>Name:</label>
 		    <input type="text" name="category_name">
 		

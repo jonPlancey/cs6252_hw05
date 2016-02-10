@@ -5,12 +5,16 @@
 	
 	$action = filter_input(INPUT_POST, 'action');
 	
+
+	
+	
 	if ($action == NULL) {
 	    $action = filter_input(INPUT_GET, 'action');
 	    if ($action == NULL) {
 	        $action = 'list_products';
 	    }
 	}
+	
 	
 	if ($action == 'list_products') {
 		
@@ -87,14 +91,14 @@
 	function add_categories(){
 		$categories = get_categories();
 		add_category($categories);
-		//header('Location: .?action=list_categories');
+		header('Location: .?action=list_categories');
 		
 	}
 	
 	function delete_categories(){
-		$categories = get_categories();
-		delete_category($categories);		
-		//header('Location: .?action=list_categories');
+		$category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
+		delete_category($category_id);
+		header('Location: .?action=list_categories');		
 	}
 
 
