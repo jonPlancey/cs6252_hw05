@@ -79,8 +79,11 @@
 		
 	} else if ($action == 'delete_categories') {		
 		delete_categories();		
-		
-	}
+			
+	} else if ($action == 'edit_product') {
+		edit_categories();
+	
+	}	
 	
 	
 	function list_categories(){
@@ -106,7 +109,11 @@
 		header('Location: .?action=list_categories');
 	}
 
+	function edit_categories(){
 
+		$categories = get_categories();
+		include('product_edit.php');
+	}
 
 
 
