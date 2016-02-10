@@ -80,8 +80,8 @@
 	} else if ($action == 'delete_categories') {		
 		delete_categories();		
 			
-	} else if ($action == 'edit_product') {
-		edit_categories();
+	} else if ($action == 'edit_products') {
+		edit_products();
 	
 	}	
 	
@@ -109,10 +109,39 @@
 		header('Location: .?action=list_categories');
 	}
 
-	function edit_categories(){
+	function edit_products(){
+		$category_id 	= filter_input(INPUT_POST, 'category_id');		
+		$product_id 	= filter_input(INPUT_POST, 'product_id');
+		$code			= filter_input(INPUT_POST, 'code');
+		$name 			= filter_input(INPUT_POST, 'name');
+		$price 			= filter_input(INPUT_POST, 'price');
+				
+		edit_product($product_id, $category_id, $code, $name, $price);
+		//header('Location: .?action=list_categories');
+		
+		
+		//header("Location: .?category_id=$category_id");
+		//header("Location: .?product_id=$product_id");
+		
+		/*$code = filter_input(INPUT_POST, 'code');
+		$name = filter_input(INPUT_POST, 'name');
+		$price = filter_input(INPUT_POST, 'price');
+		
+		edit_product($category_id, $code, $name, $price);
+		header("Location: .?category_id=$category_id");
+		*/
+		
+		/*
+		if ($category_id == NULL || $category_id == FALSE || $code == NULL ||
+				$name == NULL || $price == NULL || $price == FALSE) {
+			$error = "Invalid product data. Check all fields and try again.";
+			include('../errors/error.php');
+		} else {
+			edit_product($category_id, $code, $name, $price);
+			header("Location: .?category_id=$category_id");
+		}
+		*/		
 
-		$categories = get_categories();
-		include('product_edit.php');
 	}
 
 

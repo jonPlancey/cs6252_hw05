@@ -47,15 +47,5 @@
 
 	}
 	
-	function edit_category($category_id) {
-		global $db;
-		$query = 'DELETE FROM categories
-              WHERE categoryID = :category_id';
-			
-		$statement = $db->prepare($query);
-		$statement->bindValue(':category_id', $category_id);
-		$success = $statement->execute();
-		$statement->closeCursor();
-	
-	}	
+
 ?>
