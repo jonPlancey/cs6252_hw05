@@ -67,7 +67,7 @@
 	    }
     
 	} else if ($action == 'list_categories') {
-		echo 'list_categories';
+    	list_categories();
 		
 	} else if ($action == 'add_category') {
 		echo 'add_category';
@@ -77,7 +77,10 @@
 		
 	}
 
-
+	function list_categories(){
+		$categories = get_categories();
+		include('category_list.php');		
+	}
 
 
 
