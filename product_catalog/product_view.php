@@ -5,21 +5,7 @@
     <aside>
         <h1>Categories</h1>
         
-        <?php include '../view/categories_nav.php'; ?>
-                
-        <nav>
-            <ul class="nav">
-                <!-- display links for all categories -->
-                <?php foreach($categories as $category) : ?>
-                <li>
-                    <a href="?category_id=<?php 
-                              echo $category['categoryID']; ?>">
-                        <?php echo $category['categoryName']; ?>
-                    </a>
-                </li>
-                <?php endforeach; ?>
-            </ul>
-        </nav>
+        <?php include '../view/categories_nav.php'; ?> 
         
     </aside>
     
@@ -51,4 +37,5 @@
         </div>
     </section>
 </main>
+
 <?php include '../view/footer.php'; ?>
