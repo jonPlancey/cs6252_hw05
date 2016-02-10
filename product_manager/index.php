@@ -41,6 +41,7 @@
 	        delete_product($product_id);
 	        header("Location: .?category_id=$category_id");
 	    }
+	    
 	} else if ($action == 'show_add_form') {
 		
 		
@@ -84,14 +85,14 @@
 	}
 
 	function add_categories(){
-		add_category();
-		header('Location: .?action=list_caetgories');
+		$categories = add_category();
+		//header('Location: .?action=list_categories');
 		
 	}
 	
 	function delete_categories(){
-		delete_category();		
-		header('Location: .?action=list_caetgories');
+		$categories = delete_category();		
+		//header('Location: .?action=list_categories');
 	}
 
 
