@@ -21,11 +21,11 @@
 	    return $category_name;
 	}
 	
-	function _add_category($category_id) {
+	function add_category($category_id) {
 		echo $category_id;	
 	}
 		
-	function _delete_category($category_id) {
+	function delete_category($category_id) {
 		echo $category_id;
 	}
 ?>

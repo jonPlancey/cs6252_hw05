@@ -69,10 +69,10 @@
 	} else if ($action == 'list_categories') {
     	list_categories();
 		
-	} else if ($action == 'add_category') {
+	} else if ($action == 'add_categories') {
 		add_category();
 		
-	} else if ($action == 'delete_category') {
+	} else if ($action == 'delete_categories') {
 		delete_category();
 		
 	}
@@ -83,12 +83,12 @@
 		include('category_list.php');
 	}
 
-	function add_category(){
-		echo 'add_category';
+	function add_categories(){
+		add_category();
 	}
 	
-	function delete_category(){
-		echo 'delete_category';		
+	function delete_categories(){
+		delete_category();		
 	}
 
 
