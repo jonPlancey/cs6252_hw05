@@ -6,6 +6,8 @@
         <!-- display a list of categories -->
         <h2>Categories</h2>
         
+        <?php include '../view/categories_nav.php'; ?>
+        
         <nav>
 	        <ul>
 	        <?php foreach ($categories as $category) : ?>
