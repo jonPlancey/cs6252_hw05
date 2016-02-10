@@ -37,7 +37,7 @@
 	    <!-- Newly added form code -->  
 	    
 	    <br>
-	    <p><a href="index.php">List Products</a></p>
+	    <p><a href="index.php?action=list_products">List Products</a></p>
 
     </main>
     
