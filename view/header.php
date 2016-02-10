@@ -8,8 +8,8 @@
 			$path = $dir[0];
 		} else {
 			$path = $dir[1];
-		}		
-		echo $path. 'main.css';		
+		}
+		echo $path. 'main.css';
 	}
 
 
