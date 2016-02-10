@@ -75,9 +75,13 @@
     	list_categories();
 		
 	} else if ($action == 'add_categories') {
+		echo '<script language="javascript">alert("add_categories")</script>';
+		
 		add_category();
 		
 	} else if ($action == 'delete_categories') {
+		echo '<script language="javascript">alert("delete_categories")</script>';
+		
 		delete_category();
 		
 	}
@@ -89,6 +93,10 @@
 	}
 
 	function add_categories(){
+		
+		echo '<script language="javascript">alert("add_categories")</script>';
+		
+		
 		$categories = get_categories();
 		add_category($categories);
 		header('Location: .?action=list_categories');
@@ -96,6 +104,11 @@
 	}
 	
 	function delete_categories(){
+		
+		echo '<script language="javascript">alert("add_categories")</script>';
+		
+		
+		
 		$category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 		delete_category($category_id);
 		header('Location: .?action=list_categories');		
